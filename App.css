@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 8%;
+  position: relative; 
+}
+
+.navbar h2 {
+  color: #38bdf8;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  align-items: center;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-btn,
+.nav-btn-mobile,
+.hero button {
+  background: #38bdf8;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-btn-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.menu-icon .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #cbd5e1;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 80px 8%;
+}
+
+.card {
+  background: white;
+  color: #111827;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.pricing {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.price-card {
+  background: white;
+  color: #111827;
+  max-width: 350px;
+  margin: 30px auto;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+ 
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .nav-btn-mobile {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #0f172a; /* Dark background taake links saaf dikhein */
+    padding: 20px 0;
+    gap: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+}
